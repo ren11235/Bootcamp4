@@ -46,10 +46,9 @@ class App extends React.Component {
   render() {
     
     return (
-      <div className="bg">
-        <div className="row">
-          <h1>UF Directory App</h1>
-        </div>
+
+      <div>
+        <div className = "header"><h1>UF Directory App</h1></div>
         <Search
           filterText={this.state.filterText}
           filterUpdate={this.filterUpdate.bind(this)}
@@ -61,7 +60,10 @@ class App extends React.Component {
                 <table className="table table-striped table-hover">
                   <tr>
                     <td>
-                      <b>Code Building</b>
+                      
+                      <h2><b>Buildings</b></h2>
+                      <h4>Click on a name to view more information</h4>
+                      
                     </td>
                   </tr>
                   <BuildingList

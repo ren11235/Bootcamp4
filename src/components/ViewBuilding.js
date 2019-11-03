@@ -10,7 +10,7 @@ class ViewBuilding extends React.Component {
 		.map(id=>{
 			if(id.coordinates){
 				return(
-					<div>
+					<div className = "popup">
 						<p>Building name: {id.name}</p>
 						<ul>
 							<li>Code: {id.code}</li>
@@ -22,9 +22,20 @@ class ViewBuilding extends React.Component {
 					</div>
 				)
 			}
+			else if(id.address){
+				return(
+					<div className = "popup">
+							<p>Building name: {id.name}</p>
+							<ul>
+								<li>Code: {id.code}</li>
+								<li>Address: {id.address}</li>
+							</ul>
+					</div>
+				)
+			}
 			else{
 				return(
-					<div>
+					<div className = "popup">
 						<p>Building name: {id.name}</p>
 						<ul>
 							<li>Code: {id.code}</li>
@@ -37,8 +48,6 @@ class ViewBuilding extends React.Component {
 		return (
 			<div>
 				<p>
-					{' '}
-					<h2>Click on a name to view more information</h2>
 					{building}	
 					
 				</p>

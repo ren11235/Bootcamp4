@@ -1,6 +1,6 @@
 import React from 'react';
 
-class AddBuilding extends React.Component {
+class RemoveBuilding extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -64,4 +64,4 @@ class AddBuilding extends React.Component {
         }
     }
 }
-export default AddBuilding;
+export default RemoveBuilding;
